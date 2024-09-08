@@ -1,24 +1,29 @@
-import React from 'react';
-import Header from './components/Header';
-import Dashboard from './components/Dashboard';
-import Crops from './components/Crops';
-import Inventory from './components/Inventory';
-import Reports from './components/Reports';
-import Footer from './components/Footer';
-import './styles/App.css';
+// App.js
+import React from "react";
+import UserProfile from "./UserProfile";
 
-function App() {
-  
+const App = () => {
+  const userData = {
+    name: "BHAVANA V",
+    age: 19,
+    Education_Qualification: "Currently pursuring B tech IT.",
+    DOB:"23-Jun-2005",
+    Sex:"Female",
+  }
+
   return (
-    <div className="App">
-      <Header />
-      <Dashboard />
-      <Crops />
-      <Inventory />
-      <Reports />
-      <Footer />
+    <div>
+      <h1>User Profile Page</h1>
+      <UserProfile 
+        name={userData.name} 
+        age={userData.age} 
+        Education_Qualification={userData.Education_Qualification} 
+        DOB={userData.DOB}
+        Sex={userData.Sex}
+       
+      />
     </div>
   );
-}
+};
 
 export default App;
